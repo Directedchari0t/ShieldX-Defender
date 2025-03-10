@@ -48,8 +48,9 @@ After successfully installing ShieldX-Defender, you can use it to scan files, mo
 Scanning Files
 You can run the scanner on any file by calling the scan_file() method in the scanner.py module. For example:
    ```bash
-scanner = AntiVirusScanner()
-scanner.scan_file('/path/to/file')
+   scanner = AntiVirusScanner()
+   scanner.scan_file('/path/to/file').
+
 
 
 
