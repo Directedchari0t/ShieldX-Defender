@@ -25,5 +25,11 @@ This project allows users to easily integrate a local antivirus scanner into the
    cd ShieldX-Defender
 2. Set up the environment:
 It's recommended to create a virtual environment to manage dependencies:
-   python -m venv venv
-   source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+   ```bash
+    python -m venv venv
+    source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+3. Install dependencies:
+Run the following command to install the necessary dependencies:
+  ```bash
+    pip install -r requirements.txt
+
