@@ -33,6 +33,24 @@ Run the following command to install the necessary dependencies:
     ```bash 
      pip install -r requirements.txt
 
-  
+4. Configure YARA Rules:
+Ensure that your YARA rules are correctly placed in the data/yara_rules/ directory. You can find example rules in the data/yara_rules/ folder. You can add custom rules as well. To add your own YARA rules, just place them in the data/yara_rules/ folder and ensure they have the .yar extension.
+
+5. Run the application:
+Once the setup is complete, start the application by running:
+   ```bash
+   python antivirus.py
+6. Access the dashboard:
+Open your web browser and go to http://localhost:6969 to view the real-time web dashboard of scan results.
+Usage
+After successfully installing ShieldX-Defender, you can use it to scan files, monitor directories, and access results on the web dashboard.
+
+Scanning Files
+You can run the scanner on any file by calling the scan_file() method in the scanner.py module. For example:
+   ```bash
+scanner = AntiVirusScanner()
+scanner.scan_file('/path/to/file')
+
+
 
 
