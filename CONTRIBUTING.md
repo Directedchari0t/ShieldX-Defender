@@ -32,7 +32,7 @@ Before you start, please read these guidelines to ensure a smooth collaboration.
 2. **Submit a Proposal**: Use the [Feature Request Template](https://github.com/the0ffs3c/ShieldX-Defender/issues/new?template=feature_request.md).
 3. **Explain**:
    - The problem your feature solves
-   - Proposed implementation (optional)
+   - Proposed implementation 
 
 ---
 
@@ -48,28 +48,5 @@ Before you start, please read these guidelines to ensure a smooth collaboration.
    cd ShieldX-Defender
 
 
----
-
-### Key Links to Include:
-1. **Issue Templates** (create these in `.github/ISSUE_TEMPLATE/`):
-   - `bug_report.md`
-   - `feature_request.md`
-
-2. **Project-Specific Links**:
-   - Roadmap
-   - Code of Conduct
-   - License
-
-3. **External Resources**:
-   - PEP 8
-   - YARA docs
-   - Black formatter
-
----
-
-### Setup Steps for Maintainers:
-1. Create `.github/ISSUE_TEMPLATE/` with issue templates.
-2. Add a `CODE_OF_CONDUCT.md` (use [Contributor Covenant](https://www.contributor-covenant.org/)).
-3. Update all placeholder links (e.g. email).
 
  
