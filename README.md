@@ -23,3 +23,7 @@ This project allows users to easily integrate a local antivirus scanner into the
    ```bash
    git clone https://github.com/the0ffs3c/ShieldX-Defender.git
    cd ShieldX-Defender
+2. Set up the environment:
+It's recommended to create a virtual environment to manage dependencies:
+   python -m venv venv
+   source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
