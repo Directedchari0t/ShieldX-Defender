@@ -132,7 +132,7 @@ Open a Pull Request
 # 📞 Contact
 Report Issues: GitHub Issues
 
-Email: your-the0ffs3c@gmail.com
+Email: the0ffs3c@gmail.com
 
   
 
