@@ -107,6 +107,14 @@ Validate rule syntax:
 
 #####  2.Check for port conflicts
 
+## 📸 Screenshots
+
+### Web Dashboard
+![Dashboard Preview](screenshots/dashboard.png)
+
+### Malware Alert
+![Alert Example](screenshots/alert.png)
+
 # 🤝 Contributing
 
 Fork the repository
