@@ -110,10 +110,10 @@ Validate rule syntax:
 ## 📸 Screenshots
 
 ### Web Dashboard
-![Dashboard Preview](screenshots/dashboard.png)
+![Dashboard Preview](screenshorts/dashboard.png)
 
 ### Malware Alert
-![Alert Example](screenshots/alert.png)
+![Alert Example](screenshorts/alert.png)
 
 # 🤝 Contributing
 
