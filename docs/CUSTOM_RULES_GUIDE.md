@@ -3,6 +3,14 @@
 
 ### **CUSTOM_RULES_GUIDE.md**
 
+Place your custom rules in: 
+```bash
+data/yara_rules/
+├── exploits.yar
+├── ransomware.yar
+└── custom_rules.yar  <-- Add new rules here
+
+
 ```markdown
 # Custom YARA Rules Guide
 
@@ -25,12 +33,3 @@ rule RuleName {
 
 
 
-Place your custom rules in:-------------------|
-                                              |
-                                              |
-                                              |
-                                              V
-data/yara_rules/
-├── exploits.yar
-├── ransomware.yar
-└── custom_rules.yar  <-- Add new rules here
