@@ -125,6 +125,16 @@ Push to branch:
 Open a Pull Request
 
 
+# 📜 License
+
+  Distributed under the MIT License. See LICENSE for details.
+
+# 📞 Contact
+Report Issues: GitHub Issues
+
+Email: your-the0ffs3c@gmail.com
+
+  
 
 
       
