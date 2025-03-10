@@ -30,8 +30,8 @@ It's recommended to create a virtual environment to manage dependencies:
     source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
 3. Install dependencies:
 Run the following command to install the necessary dependencies:
-  ```bash 
-    pip install -r requirements.txt
+    ```bash 
+     pip install -r requirements.txt
 
   
 
