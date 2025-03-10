@@ -1,51 +1,130 @@
-# ShieldX-Defender
+# 🛡️ ShieldX-Defender
 
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/the0ffs3c/ShieldX-Defender/CI)
-
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/the0ffs3c/ShieldX-Defender/CI.yml?label=Build%20Status)
+![GitHub License](https://img.shields.io/github/license/the0ffs3c/ShieldX-Defender)
+![Python Version](https://img.shields.io/badge/Python-3.8%2B-blue)
 ## Overview
+**ShieldX-Defender** is a Python-based antivirus scanner that integrates real-time file monitoring with YARA rule-based scanning and known malware hash detection. Designed for both security enthusiasts and developers, it provides robust protection against malicious files while offering a user-friendly web dashboard for monitoring.
 
-**ShieldX-Defender** is a Python-based antivirus scanner that integrates real-time file monitoring with YARA rule-based scanning and known malware hash detection. The software provides effective protection against malicious files by scanning files for known malware signatures, suspicious behaviors, and file types. 
+## ✨ Features
 
-This project allows users to easily integrate a local antivirus scanner into their systems with minimal configuration and offers a web dashboard to view scan results.
-
-## Features
-
-- **Real-time File Monitoring**: Automatically scans files when they're added or modified.
-- **YARA Rule Integration**: Uses YARA rules for enhanced malware detection.
-- **Known Malware Hash Checking**: Compares file hashes against a database of known malware hashes.
-- **Web Dashboard**: View scan results through a real-time web interface (Flask-based).
-- **Customizable Alerts**: Sends alerts for suspicious or malicious files.
-- **Cross-Platform**: Works on Linux, Windows, and macOS.
-
-## Installation
-
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/the0ffs3c/ShieldX-Defender.git
-   cd ShieldX-Defender
-2. Set up the environment:
-It's recommended to create a virtual environment to manage dependencies:
-   ```bash
-    python -m venv venv
-    source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
-3. Install dependencies:
-Run the following command to install the necessary dependencies:
-    ```bash 
-     pip install -r requirements.txt
-
-4. Configure YARA Rules:
-Ensure that your YARA rules are correctly placed in the data/yara_rules/ directory. You can find example rules in the data/yara_rules/ folder. You can add custom rules as well. To add your own YARA rules, just place them in the data/yara_rules/ folder and ensure they have the .yar extension.
-
-5. Run the application:
-Once the setup is complete, start the application by running:
-   ```bash
-   python antivirus.py
-🖥️ Usage
-      Monitor a Directory:
-      To monitor a directory for new files:
-   ```bash
-    python3 antivirus.py --monitor /path/to/directory
+- 🕵️ **Real-Time Monitoring**: Auto-scans files in specified directories
+- ⚔️ **YARA Rule Engine**: Custom malware detection using YARA rules
+- 🔒 **Hash-Based Detection**: SHA256 comparison against known malware database
+- 📊 **Web Dashboard**: Real-time scan results via Flask interface
+- 🚨 **Suspicious File Alerts**: Flags executables/ZIPs/risky file types
+- 🖥️ **Cross-Platform**: Works on Linux, Windows, and macOS
 
 
+## 🚀 Installation  <!-- STEP 1 HERE -->
+
+### Prerequisites
+- Python 3.8+
+- **libmagic** (for file type detection):
+  ```bash
+  # Linux (Debian/Ubuntu)
+  sudo apt-get install libmagic1
+
+  # macOS
+  brew install libmagic
+
+  # Windows (via Chocolatey)
+  choco install libmagic
+# Steps
+ Clone the repository:
+ 
+     git clone https://github.com/the0ffs3c/ShieldX-Defender.git
+     cd ShieldX-Defender
+   
+
+### 🖥️ Usage  
+ 
+  Basic Command:
+    
+    ```bash
+      # Monitor the default directory (Downloads)
+      python3 antivirus.py  
+  Custom Monitoring:
+   
+      # Monitor a custom directory and change the dashboard port
+      python3 antivirus.py --monitor /path/to/directory --port 8080
 
 
+  Web Dashboard:
+  
+  "After starting the tool, access the dashboard at http://localhost:6969 to view real-time scan results."
+
+## CLI Options Table:
+
+      Flag                     Description                          Default
+ 
+    --monitor<PATH>            Directory to monitor                 ~/Downloads
+
+    --port <NUM>               Web dashboard port                    6969
+
+    --verbose                  Enable detailed logging               False
+      
+# Project Structure  
+### Directory Tree:
+
+      ShieldX-Defender/
+      ├── core/               # Core logic (scanning, monitoring)
+      ├── web/                # Flask-based dashboard
+      ├── data/               # YARA rules and malware hashes
+      ├── tests/              # Unit/integration tests
+      └── requirements.txt    # Python dependencies
+
+### File Descriptions:
+
+      - `core/scanner.py`: Implements file scanning using YARA and hash checks.
+      - `web/dashboard.py`: Runs the Flask server for the web interface.
+      - `data/yara_rules/`: Store custom YARA rules here (e.g., `ransomware.yar`).
+
+# 🛠️ Troubleshooting  
+
+### Common Errors & Fixes:
+
+    ### "Magic Library Not Found"
+      Install `libmagic` for your OS:
+      ```bash
+      # Ubuntu/Debian
+      sudo apt-get install libmagic1
+
+## "YARA Rules Not Loading"
+
+   #### Verify file permissions:
+
+      chmod 644 data/yara_rules/*.yar
+
+Ensure YARA files are in data/yara_rules/ and have .yar extensions.
+
+Validate rule syntax:
+
+      yara data/yara_rules/exploits.yar test_file.exe
+### Web Dashboard Not Accessible
+
+####  1.Allow firewall access for port 6969
+
+#####  2.Check for port conflicts
+
+# 🤝 Contributing
+
+Fork the repository
+
+Create a feature branch:
+
+      git checkout -b feature/amazing-feature
+
+Commit changes:
+
+      git commit -m "Add amazing feature"
+
+Push to branch:
+
+      git push origin feature/amazing-feature
+Open a Pull Request
+
+
+
+
+      
