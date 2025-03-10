@@ -1,0 +1,76 @@
+name: ShieldX-Defender CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  lint-test:
+    name: Lint and Test
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.8", "3.9", "3.10"]
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        pip install flake8 black
+
+    - name: Lint with flake8
+      run: |
+        flake8 core/ web/ tests/ --count --show-source --statistics
+
+    - name: Check formatting with Black
+      run: |
+        black --check core/ web/ tests/
+
+    - name: Run tests with pytest
+      run: |
+        pip install pytest
+        pytest tests/ -v
+
+  yara-validation:
+    name: Validate YARA Rules
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Install YARA
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y yara
+
+    - name: Validate YARA syntax
+      run: |
+        for file in data/yara_rules/*.yar; do
+          yara -s "$file" /dev/null
+        done
+
+  security-scan:
+    name: Security Scan
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Bandit Security Scan
+      uses: PyCQA/bandit@main
+      with:
+        targets: core/,web/
+        args: |
+          --severity-level high
+          --confidence-level high
+          --format txt
