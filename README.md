@@ -135,12 +135,20 @@ Open a Pull Request
 
 # 📜 License
 
-  Distributed under the MIT License. See LICENSE for details.
 
-# 📞 Contact
-Report Issues: GitHub Issues
+Distributed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-Email: the0ffs3c@gmail.com
+
+## Contact
+
+If you have any questions, feel free to reach out:
+
+- **Email**: [the0ffs3c@gmail.com](mailto:the0ffs3c@gmail.com)
+- **GitHub**: [https://github.com/the0ffsc](https://github.com/the0ffs3c)
+- **LinkedIn**: [https://www.linkedin.com/in/Akshay Mahant](https://www.linkedin.com/in/akshay-mahant-231b97290)
+
+You can also open an issue or pull request if you encounter any bugs or would like to contribute.
+
 
   
 
