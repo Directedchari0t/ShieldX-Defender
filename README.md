@@ -40,17 +40,11 @@ Ensure that your YARA rules are correctly placed in the data/yara_rules/ directo
 Once the setup is complete, start the application by running:
    ```bash
    python antivirus.py
-6. Access the dashboard:
-Open your web browser and go to http://localhost:6969 to view the real-time web dashboard of scan results.
-Usage
-After successfully installing ShieldX-Defender, you can use it to scan files, monitor directories, and access results on the web dashboard.
-
-Scanning Files
-You can run the scanner on any file by calling the scan_file() method in the scanner.py module. For example:
+🖥️ Usage
+      Monitor a Directory:
+      To monitor a directory for new files:
    ```bash
-   scanner = AntiVirusScanner()
-   scanner.scan_file('/path/to/file').
-
+    python3 antivirus.py --monitor /path/to/directory
 
 
 
