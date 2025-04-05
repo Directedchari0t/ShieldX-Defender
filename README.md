@@ -33,7 +33,7 @@
 # Steps
  Clone the repository:
  
-     git clone https://github.com/the0ffs3c/ShieldX-Defender.git
+     git clone https://github.com/Directedchari0t/ShieldX-Defender.git
      cd ShieldX-Defender
    
 
